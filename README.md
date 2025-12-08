@@ -91,9 +91,30 @@ text## How to Run
 python preprocess_data.py
 python train_model.py
 python real_time_inference.py
-Limitations & Future Improvements
+## Android App (Standalone Fall Detection)
+
+✅ **COMPLETED!** The TensorFlow Lite model has been integrated into a standalone Android app!
+
+- **No server required**: All inference runs directly on the phone
+- **Real-time detection**: Uses phone's accelerometer sensor
+- **TFLite model**: Optimized 6.4 MB model
+- **Full UI**: Activity display, confidence scores, fall alerts with vibration
+
+### Quick Start
+```bash
+# Convert H5 model to TFLite (already done)
+python convert_to_tflite.py
+
+# Build Android app
+cd android
+./gradlew assembleRelease
+```
+
+See [`android/README.md`](android/README.md) for detailed instructions.
+
+## Limitations & Future Improvements
 
 Fall data is limited → can improve recall with more samples
 Only accelerometer used → adding gyroscope can help
 Tested on one phone → need multi-device validation
-Future: Convert to TensorFlow Lite → Deploy in actual Android app
+~~Future: Convert to TensorFlow Lite → Deploy in actual Android app~~ ✅ **DONE!**

@@ -1,0 +1,10 @@
+{
+  "labels": [
+    "walking",
+    "running",
+    "standing",
+    "pocket",
+    "falls"
+  ],
+  "window_size": 400
+}
